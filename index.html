@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo&family=Crete+Round&family=Noto+Sans+JP:wght@400;700&family=Sarabun:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a045c6aef0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container c1">
+      <div
+        class="card"
+        style="width: 48rem; display: block; margin: auto; margin-top: 10%"
+      >
+        <div class="card-body">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-6">
+                <input
+                  type="search"
+                  class="form-control"
+                  placeholder="enter a city"
+                  id="search-city"
+                  autocomplete="off"
+                  autofocus="off"
+                  style="box-shadow: none"
+                />
+              </div>
+
+              <div class="col-2">
+                <input
+                  id="search-button"
+                  class="btn btn-primary"
+                  type="submit"
+                  value="🔎 "
+                />
+                <button
+                  type="button"
+                  id="location-button"
+                  class="btn btn-outline-secondary"
+                >
+                  📍
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col box">
+              <span class="cloud">🌥️</span>
+              <span class="daily-temp" id="temp"> 10 </span>
+              <span class="degrees"
+                ><a href="" id="celsius">°C </a> |
+                <a href="" id="fahrenheit">°F </a>
+              </span>
+              <span class="daily-percent">
+                <p id="wind">🌀 Wind 4 mph</p>
+                <p id="humidity">🌡️💧Humidity 74%</p></span
+              >
+            </div>
+
+            <div class="col box">
+              <h1>Los Angeles</h1>
+              <p class="date">Sunday 8:00am</p>
+              <p class="temp-sky">MOSTLY CLOUDY</p>
+            </div>
+            <hr style="width: 90%" />
+            <div class="row weather-report">
+              <div class="col">
+                Sun
+                <br />
+                <span class="w-emoji">🌥️</span>
+                <br />
+                <strong>62°</strong> 49°
+              </div>
+              <div class="col">
+                Mon
+                <br />
+                <span class="w-emoji">🌧️ </span>
+                <br />
+                <strong>58°</strong> 56°
+              </div>
+              <div class="col">
+                Tue
+                <br />
+                <span class="w-emoji">🌩️</span>
+                <br />
+                <strong>59°</strong> 46°
+              </div>
+              <div class="col">
+                Wed
+                <br />
+                <span class="w-emoji">🌥️</span>
+                <br />
+                <strong>62°</strong> 47°
+              </div>
+              <div class="col">
+                Thu
+                <br />
+                <span class="w-emoji">🌥️</span>
+                <br />
+                <strong>69°</strong> 50°
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <span id="contact">
+        <small>
+          <a
+            href="https://github.com/bcross2425/cross-weather-app"
+            target="blank"
+            >Open-source code</a
+          >
+          by Brittany Cross
+        </small>
+      </span>
+    </div>
+
+    <script src="src/script.js"></script>
+  </body>
+</html>
