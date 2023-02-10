@@ -104,7 +104,8 @@ hr {
   text-decoration: none;
 }
 #contact {
-  margin: 250px;
+  text-align: center;
+  margin-top: 20px;
 }
 input:focus {
   outline: none !important;
