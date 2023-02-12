@@ -30,13 +30,19 @@ function showTemperature(response) {
   let heading = document.querySelector("h1");
   heading.innerHTML = currentCity;
   let windy = document.querySelector("#wind");
-  windy.innerHTML = `🌀 Wind ${wind} mph`;
+  windy.innerHTML = `${wind}`;
   let humid = document.querySelector("#humidity");
-  humid.innerHTML = `🌡️💧Humidity ${humidity} %`;
+  humid.innerHTML = `${humidity}`;
   let currentTemp = document.querySelector("#temp");
   currentTemp.innerHTML = temperature;
   let description = document.querySelector("p.temp-sky");
   description.innerHTML = weather.toUpperCase();
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function showPosition(position) {
@@ -67,3 +73,4 @@ function submitForm(event) {
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", submitForm);
+citySearch("Los Angeles");

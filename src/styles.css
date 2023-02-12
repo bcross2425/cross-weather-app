@@ -58,7 +58,7 @@ hr {
 }
 .daily-temp {
   font-size: 65px;
-  padding-left: 7px;
+
   font-family: "Noto Sans JP", sans-serif;
 }
 .degrees {
@@ -78,19 +78,20 @@ hr {
   text-align: end;
   padding-right: 7px;
 }
-.cloud {
-  font-size: 55px;
+#icon {
+  vertical-align: top;
 }
-
 .box-2 {
   padding-left: 247px;
   padding-top: 15px;
 }
-.daily-percent {
-  display: block;
-  margin-top: 8px;
+#daily-percent {
+  margin-top: 0 auto;
   font-size: 15px;
-  padding-bottom: 20px;
+  padding: 0;
+  list-style: none;
+  font-family: "Archivo", sans-serif;
+  line-height: 1;
 }
 .weather-report {
   text-align: center;
