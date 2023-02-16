@@ -23,7 +23,7 @@ p.innerHTML = currentDate;
 
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
-  let wind = response.data.wind.speed;
+  let wind = Math.round(response.data.wind.speed);
   let humidity = response.data.main.humidity;
   let currentCity = response.data.name;
   let weather = response.data.weather[0].description;
