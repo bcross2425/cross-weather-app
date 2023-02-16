@@ -78,6 +78,13 @@ hr {
   text-align: end;
   padding-right: 7px;
 }
+.weather-temperature .active {
+  color: #000;
+  cursor: default;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
 #icon {
   vertical-align: top;
 }
