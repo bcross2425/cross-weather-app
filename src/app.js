@@ -56,8 +56,6 @@ function showPosition(position) {
 function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
-let locationButton = document.querySelector("#location-button");
-locationButton.addEventListener("click", getCurrentPosition);
 
 function citySearch(city) {
   let apiEndpoint = `https://api.openweathermap.org/data/2.5/weather?q=`;
@@ -88,6 +86,9 @@ function displayCelsiusTemp(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 let celsiusTemperature = null;
+
+let locationButton = document.querySelector("#location-button");
+locationButton.addEventListener("click", getCurrentPosition);
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", submitForm);

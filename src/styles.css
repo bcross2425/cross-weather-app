@@ -10,10 +10,11 @@ body {
 }
 .card-body {
   padding-right: 0;
+
   background: radial-gradient(
-    circle at 10% 20%,
-    rgba(216, 241, 230, 0.46) 0.1%,
-    rgba(233, 226, 226, 0.28) 90.1%
+    592px at 48.2% 50%,
+    rgba(255, 255, 249, 0.6) 0%,
+    rgb(160, 199, 254) 74.6%
   );
 }
 #search-city {
@@ -35,7 +36,7 @@ body {
   width: 14%;
 }
 h1 {
-  color: #0aa0f6;
+  color: #2d4059;
   width: 355px;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;
@@ -73,7 +74,7 @@ hr {
   font-size: 20px;
 }
 .temp-sky {
-  color: #9ba6a5;
+  color: #132743;
   font-size: 20px;
   text-align: end;
   padding-right: 7px;
