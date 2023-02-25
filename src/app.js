@@ -20,6 +20,7 @@ if (minutes < 10) {
 let currentDate = `${currentDay} ${hours}:${minutes}`;
 let p = document.querySelector("p.date");
 p.innerHTML = currentDate;
+
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
@@ -45,6 +46,13 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+
+function getForecast(coordinates) {
+  let apiKey = `57821c3b75b60c68ecd1a8d0dd1aa8d3`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function showTemperature(response) {
   celsiusTemperature = Math.round(response.data.main.temp);
   let wind = Math.round(response.data.wind.speed);
@@ -67,6 +75,7 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  getForecast(response.data.coord);
 }
 
 function showPosition(position) {
