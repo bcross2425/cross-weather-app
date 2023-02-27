@@ -119,3 +119,6 @@ hr {
 input:focus {
   outline: none !important;
 }
+.weather-forecast-temperature-max {
+  font-weight: bold;
+}
